@@ -1,0 +1,278 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-color: rgb(32, 32, 32);
+    /* truque pra fazer o footer sempre ficar no fundo da pagina */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    padding:20px 8px;
+    height: 70px;
+    background-color: #1073ad;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/* ********************************************* */
+
+
+.center{
+    max-width: 1280px;
+    margin:0 auto;
+    padding:0 2%;
+    /* display: flex; */
+}
+
+.logo{
+    margin-left: 30px;
+}
+
+.logo h2{
+    color:white;
+}
+
+.logo b{
+    color: goldenrod;
+}
+
+.form-busca{
+    width:50%;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.form-busca form{
+    display: inline-block;
+    max-width: 200px;
+    position: relative;
+}
+
+.form-busca i{
+    position: absolute;
+    left: 10px;
+    top:50%;
+    transform: translateY(-50%);
+    color:white;
+    font-size: 15px;
+}
+
+.form-busca input{
+    height:40px;
+    width:100%;
+    border:0;
+    font-size: 15px;
+    color:white;
+    background-color: #094379;
+    padding-left: 40px;
+    border-radius:10px;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
+
+  section.noticia-destaque{
+      padding:40px 0;
+  }
+
+  section.noticia-destaque > .center{
+      max-width: 960px;
+  }
+
+
+
+  .img-destaque{
+      width:100%;
+      position: relative;
+  }
+  .img-destaque img{
+      width:100%;
+    
+      /* border-radius:20px; */
+      
+  }
+
+  .title-destaque-descricao{
+      position: absolute;
+      bottom:0;
+      left:0;
+      padding:10px;
+      width: 100%;
+      /* max-width: 600px; */
+      color:white;
+      background-color: rgba(0, 0, 0, 0.471);
+      /* border-bottom-left-radius:20px;
+      border-bottom-right-radius:20px; */
+      z-index: 2;
+
+      transition: 1.2s;
+  }
+
+
+  .title-destaque-descricao:hover{
+    transition: 0.6s ;
+    background-color: rgba(0, 0, 0, 0.812);
+  }
+
+  .title-destaque-descricao h2{
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+  .title-destaque-descricao p{
+    width: 100%;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-style: light;
+}
+
+  .overlay-destaque{
+      position: absolute;
+      left:0;
+      top:0;
+      /* border-radius:20px; */
+      width:100%;
+      height:100%;
+      /* height: 400px; */
+      background-color:rgba(0,0,0,0.4);
+      z-index: 1;
+
+      transition: 1s;
+  }
+
+  /* ********************************************* */
+
+
+
+  section.outras-news{
+    background-color: rgb(32, 32, 32);
+    padding: 30px 5px;
+    text-align: center;
+  }
+
+  section.outras-news h2{
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .title-outras-news > h2{
+    color: goldenrod;
+  }
+
+  .ultimas{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: blue; */
+  }
+
+  .box-news img{
+    width: 90%;
+  }
+
+  .box-news h3{
+    color: #0d5191;
+    padding: 5px 0;
+    font-size: 15px;
+  }
+
+  .box-news h2 {
+    color: white;
+    font-size: 18px !important; 
+    padding: 0 10px;
+  }
+
+
+  .mais-lidas{
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .mais-lidas > h3{
+    background-color: rgb(68, 180, 142);
+    text-align: center;
+    padding: 10px 8px;
+  }
+
+  .mais-lidas-news{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .mais-lidas-news img{
+    padding: 10px 15px;
+    width: 50%;    
+  }
+
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content h4{
+    color: rgb(12, 242, 165);
+    text-align: left;
+  }
+
+  .content p{
+    color: white;
+  }
+
+
+/* ********************************************* */
+
+
+footer{
+  margin-top: auto;
+  width: 100%;
+  padding: 2px 0px;
+  background-color: #1073ad;
+  text-align: center;
+  color: white;
+}
+
+footer a{
+  color: white;
+}
+
+
+/* ********************************************* */
+
+
+  @media screen and (min-width: 768px) {
+    .center {
+      display: flex;
+    }
+
+    section.outras-news h2{
+      font-size: 50px;
+    }
+
+    .title-destaque-descricao h2{
+      font-size: 55px;
+  }
+  }
+

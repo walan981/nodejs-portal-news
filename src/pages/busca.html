@@ -1,0 +1,34 @@
+<%- include('partials/header.html') %>
+
+
+
+
+
+<section class="searchPage" style="color: white;">
+      <div >
+        <h2 style="display: inline-block; 
+        margin-right: 20px;">Busca por: </h2>
+        <h2 id="search" 
+        style="color: rgb(39, 88, 166);display: inline-block;"></h2>
+      </div>
+</section>
+
+
+<%- include('partials/footer.html') %>
+
+  </body>
+
+  <script>
+    //document.getElementById("search").innerHTML = window.location.search;
+    console.log(window.location.search.substring(7));
+    var busca = window.location.search.substring(7);
+    //alert(busca)
+    console.log(busca)
+    document.getElementById("search").textContent= busca;
+
+
+  </script>
+
+</html>
+
+

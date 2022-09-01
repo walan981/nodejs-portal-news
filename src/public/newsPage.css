@@ -1,0 +1,31 @@
+
+.newsPage{
+    display: flex;
+    justify-content: center;
+}
+
+.news-single{
+    width: 100%;
+    max-width: 900px;
+    padding: 40px 40px;
+}
+
+.news-single  h3, p, span{
+    color: white;
+}
+
+.news-single h3{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.news-single p{
+    font-size: 16px;
+    width: 100%;
+}
+
+.conteudo{
+    padding: 40px 30px;
+}
+
+
