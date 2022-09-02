@@ -1,18 +1,18 @@
 const express = require("express");
-//var bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 //Atualizacao do frontend em tempo real
 const livereload = require("livereload");
 const connectLiveReload = require("connect-livereload");
+//Banco de Dados
+const mongoose = require("mongoose");
 
 app.use(express.json()); //middleware para o express receber reqs em JSON
-
 //Returns middleware that only parses urlencoded bodies and only looks at requests where the Content-Type header matches the type option
 app.use(express.urlencoded({ extended: true }));
 
+//atualizacao frontend ao vivo
 app.use(connectLiveReload());
-
 const liveReloadServer = livereload.createServer();
 liveReloadServer.watch(path.join(__dirname, "/src/pages"));
 
@@ -22,10 +22,22 @@ app.set("view engine", "html");
 app.use("/public", express.static(path.join(__dirname, "/src/public")));
 app.set("views", path.join(__dirname + "/src/pages/"));
 
+//Configurar conexao com database MongoDB
+mongoose
+  .connect(
+    "mongodb+srv://root:<password>@cluster0.vsyxxp2.mongodb.net/?retryWrites=true&w=majority",
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
+  .then(() => {
+    console.log("conectado com a database");
+  })
+  .catch((error) => {
+    console.log(error.message);
+  });
+
 //Redirecionamento para as rotas
 const usersAPI = require("./src/routes/userRoutes.js");
 app.use("/", usersAPI);
-
 const newsAPI = require("./src/routes/newsRoutes.js");
 app.use("/news", newsAPI);
 
