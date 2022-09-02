@@ -25,7 +25,7 @@ app.set("views", path.join(__dirname + "/src/pages/"));
 //Configurar conexao com database MongoDB
 mongoose
   .connect(
-    "mongodb+srv://root:112233445566@cluster0.vsyxxp2.mongodb.net/?retryWrites=true&w=majority",
+    "mongodb+srv://root:112233445566@cluster0.vsyxxp2.mongodb.net/portal-news?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
@@ -48,6 +48,7 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 });
 
+//Listener do servidor
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`server started on PORT ${PORT}`);

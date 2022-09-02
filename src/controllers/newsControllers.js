@@ -1,6 +1,14 @@
+//Importar schema do mongo
+const Posts = require("../models/post");
+
 //Retorna staus do servidor
 const home = (req, res) => {
   if (req.query.busca == null) {
+    Posts.find({})
+      .sort({ "_id": -1 })
+      .exec(function (error, posts) {
+        console.log(posts[0]);
+      });
     res.render("home.html", {});
   } else {
     res.render("busca.html", {});
