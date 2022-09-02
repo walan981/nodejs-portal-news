@@ -25,11 +25,11 @@ app.set("views", path.join(__dirname + "/src/pages/"));
 //Configurar conexao com database MongoDB
 mongoose
   .connect(
-    "mongodb+srv://root:<password>@cluster0.vsyxxp2.mongodb.net/?retryWrites=true&w=majority",
+    "mongodb+srv://root:112233445566@cluster0.vsyxxp2.mongodb.net/?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
-    console.log("conectado com a database");
+    console.log("conectado com a database (OK)");
   })
   .catch((error) => {
     console.log(error.message);
