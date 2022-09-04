@@ -4,12 +4,13 @@ const Posts = require("../models/post");
 //Retorna staus do servidor
 const home = (req, res) => {
   if (req.query.busca == null) {
+    //importa noticias da colecao
     Posts.find({})
-      .sort({ "_id": -1 })
+      .sort({ "_id": -1 }) //ordem decrescente
       .exec(function (error, posts) {
         console.log(posts[0]);
+        res.render("home.html", { news: posts }); //passando posts dinamicamente para a pagina home
       });
-    res.render("home.html", {});
   } else {
     res.render("busca.html", {});
     //res.json(req.query.busca);

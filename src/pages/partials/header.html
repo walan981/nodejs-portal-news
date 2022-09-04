@@ -17,26 +17,38 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
-    <link href="/public/home.css" rel="stylesheet" />
-    <link href="/public/newsPage.css" rel="stylesheet" />
+    <!-- <link href="/public/home.css" rel="stylesheet" />
+    <link href="/public/newsPage.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="../public/tailwind.css" />
   </head>
 
-  <body>
-    <header>
-      <div class="logo">
-        <a href="http://localhost:3000/news/" style="text-decoration: none;">
-          <h2><span style="font-weight: lighter;">Portal</span><b>News</b></h2>
+  <body class="bg-[rgb(0,0,0)] h-[100vh] flex flex-col">
+    <header
+      class="px-2 py-5 bg-[rgb(0,0,0)] h-[80px] flex justify-between items-center border-b-[1px] border-b-gray-600"
+    >
+      <div class="ml-8">
+        <a href="http://localhost:3000/news/" class="decoration-[none]">
+          <h2 class="text-[28px]">
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-[rgb(5,171,140)] to-pink-600 to-blue-400"
+              >Cosmic</span
+            ><b class="text-[#94252c]">Horror</b>
+          </h2>
         </a>
       </div>
       <!--logo-->
-      <div class="form-busca">
-        <form action="/news">
-          <i class="fa fa-search" aria-hidden="true"></i>
+      <div class="w-[40%] text-right mr-5">
+        <form action="/news" class="inline-block max-w-[200px] relative">
+          <i
+            aria-hidden="true"
+            class="fa fa-search absolute left-[10px] top-1/2 translate-y-[-50%] text-[15px] text-[rgb(5,171,140)]"
+          ></i>
           <input
             name="busca"
             type="text"
             autocomplete="off"
             placeholder="Busca..."
+            class="h-10 w-full border-0 text-[17px] placeholder-gray-400 font-light text-gray-400 bg-transparent pl-10 rounded-[10px]"
           />
         </form>
       </div>

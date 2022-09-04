@@ -5,30 +5,28 @@
     font-family: 'Lato', sans-serif;
 }
 
-body{
+/* body{
     background-color: rgb(32, 32, 32);
-    /* truque pra fazer o footer sempre ficar no fundo da pagina */
-    height: 100vh;
     display: flex;
     flex-direction: column;
-}
+} */
 
-header{
+/* header{
     padding:20px 8px;
     height: 70px;
-    background-color: #1073ad;
+    background-color: rgb(16, 115, 173);
     display: flex;
     justify-content: space-between;
     align-items: center;
     
-}
+} */
 
 /* ********************************************* */
 
 
 .center{
     max-width: 1280px;
-    margin:0 auto;
+    margin:10px auto;
     padding:0 2%;
     /* display: flex; */
 }
@@ -72,7 +70,7 @@ header{
     border:0;
     font-size: 15px;
     color:white;
-    background-color: #094379;
+    background-color: rgb(9, 67, 121);
     padding-left: 40px;
     border-radius:10px;
 }
@@ -129,23 +127,23 @@ header{
   }
 
 
-  .title-destaque-descricao:hover{
+  .title-destaque-descricao2:hover{
     transition: 0.6s ;
     background-color: rgba(0, 0, 0, 0.812);
   }
 
-  .title-destaque-descricao h2{
+  /* .title-destaque-descricao h2{
     width: 100%;
     margin-bottom: 10px;
     font-size: 35px;
-}
+} */
 
-  .title-destaque-descricao p{
+  /* .title-destaque-descricao p{
     width: 100%;
     margin-bottom: 30px;
     line-height: 1.5;
     font-style: light;
-}
+} */
 
   .overlay-destaque{
       position: absolute;
@@ -181,15 +179,25 @@ header{
   }
 
   .ultimas{
-    width: 100%;
+    width: 100vw; 
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     /* background-color: blue; */
+  }
+
+  .box-news{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .box-news img{
     width: 90%;
+    max-height: 210px;
+    min-height: 137px;
+    object-fit: cover;
   }
 
   .box-news h3{
@@ -207,7 +215,7 @@ header{
 
   .mais-lidas{
     margin-top: 20px;
-    width: 100%;
+    width: 60%;
   }
 
   .mais-lidas > h3{
@@ -245,18 +253,18 @@ header{
 /* ********************************************* */
 
 
-footer{
+/* footer{
   margin-top: auto;
   width: 100%;
   padding: 2px 0px;
-  background-color: #1073ad;
+  background-color: rgb(16, 115, 173);
   text-align: center;
   color: white;
 }
 
 footer a{
   color: white;
-}
+} */
 
 
 /* ********************************************* */
@@ -273,6 +281,12 @@ footer a{
 
     .title-destaque-descricao h2{
       font-size: 55px;
+  }
+
+  .box-news img{
+    width: 300px !important;
+    height: 211px !important;
+    object-fit: cover;
   }
   }
 
