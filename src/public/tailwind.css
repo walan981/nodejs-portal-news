@@ -626,6 +626,14 @@ video {
   margin-right: 1.25rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -893,6 +901,10 @@ video {
   font-size: 17px;
 }
 
+.text-\[20px\] {
+  font-size: 20px;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -1005,6 +1017,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
   .md\:h-52 {
     height: 13rem;
   }
@@ -1021,6 +1037,14 @@ video {
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .md\:text-\[35px\] {
+    font-size: 35px;
+  }
+
+  .md\:text-\[18px\] {
+    font-size: 18px;
   }
 }
 

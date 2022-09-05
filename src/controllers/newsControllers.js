@@ -7,6 +7,7 @@ const home = (req, res) => {
     //importa noticias da colecao
     Posts.find({})
       .sort({ "date": -1 }) //ordem decrescente
+      .limit(7)
       .exec(function (error, posts) {
         console.log(posts[0]);
         res.render("home.html", { news: posts }); //passando posts dinamicamente para a pagina home
