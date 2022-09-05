@@ -6,7 +6,7 @@ const home = (req, res) => {
   if (req.query.busca == null) {
     //importa noticias da colecao
     Posts.find({})
-      .sort({ "_id": -1 }) //ordem decrescente
+      .sort({ "date": -1 }) //ordem decrescente
       .exec(function (error, posts) {
         console.log(posts[0]);
         res.render("home.html", { news: posts }); //passando posts dinamicamente para a pagina home
@@ -31,7 +31,29 @@ const newsPage = (req, res) => {
   // res.render("single-news.html", {});
 };
 
+
+const insertNewPost = async(req, res) =>{
+  const newPost = new Posts({
+    titulo: req.body.titulo,
+    imagem: req.body.imagem,
+    categoria: req.body.categoria,
+    conteudo: req.body.conteudo,
+    slug: req.body.slug,
+    autor: req.body.autor,
+    views: 0,
+    date: Date().toString(),
+  });
+  try {
+    await newPost.save(function(err,post){
+      res.send(`Post salvo ${post._id} com sucesso!`)
+    })
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 module.exports = {
   home,
   newsPage,
+  insertNewPost,
 };
