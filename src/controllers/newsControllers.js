@@ -25,8 +25,14 @@ const newsPage = (req, res) => {
     { $inc: { views: 1 } },
     { new: true },
     function (err, response) {
-      console.log(response);
-      res.render("singleNews", { news: response });
+
+      if(response != null){
+        console.log(response);
+        res.render("singleNews", { news: response });
+      }else{
+        res.redirect('/news');
+      }
+      
     }
   );
   // res.render("single-news.html", {});
