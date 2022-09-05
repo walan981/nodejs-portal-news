@@ -22,6 +22,14 @@ const postSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    "autor": {
+      type: String,
+      required: true,
+    },
+    "views": {
+      type: Number,
+      required: true,
+    },
   },
   { collection: "posts" }
 );

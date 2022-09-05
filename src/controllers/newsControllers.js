@@ -19,7 +19,16 @@ const home = (req, res) => {
 
 const newsPage = (req, res) => {
   //res.send(req.params.slug);
-  res.render("single-news.html", {});
+  Posts.findOneAndUpdate(
+    { slug: req.params.slug },
+    { $inc: { views: 1 } },
+    { new: true },
+    function (err, response) {
+      console.log(response);
+      res.render("singleNews", { news: response });
+    }
+  );
+  // res.render("single-news.html", {});
 };
 
 module.exports = {

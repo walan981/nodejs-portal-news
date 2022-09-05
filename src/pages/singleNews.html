@@ -1,0 +1,36 @@
+<%- include('partials/header.html') %>
+
+
+
+    <section style="display: flex; justify-content: center; padding-top: 40px;">
+
+            <div class="w-[80%] max-w-5xl flex justify-center flex-col">
+                <h3 class="text-white text-3xl 
+                sm:text-4xl md:text-5xl">
+                    <%= news.titulo %> 
+                </h3>
+                <span class="text-white mt-4">
+                    <%= news.autor %>
+                </span>
+
+                <div style="max-width: 768px; margin: auto">
+                    <img style="padding-top: 40px; width:100%; margin: auto;"
+                    src=<%= news.imagem %> 
+                    />
+                    <p class="text-white text-[15px] sm:text-lg sm:px-[10px]"
+                    style="padding-top: 50px;">
+                        <%= news.conteudo %>
+                    </p>
+                </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+<%- include('partials/footer.html') %>
+
+
+  </body>
+</html>
